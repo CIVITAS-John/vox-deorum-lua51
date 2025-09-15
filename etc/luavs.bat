@@ -4,6 +4,7 @@
 @rem (contributed by David Manura and Mike Pall)
 
 @setlocal
+@call "C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\vcvarsall.bat" x86
 @set MYCOMPILE=cl /nologo /MD /O2 /W3 /c /D_CRT_SECURE_NO_DEPRECATE
 @set MYLINK=link /nologo
 @set MYMT=mt /nologo
