@@ -9,11 +9,11 @@
 @rem Check if debug mode is requested via command line argument
 @if "%1"=="debug" (
   @echo Building in DEBUG mode with PDB files and assertions enabled...
-  @set MYCOMPILE=cl /nologo /MDd /Od /Zi /W3 /c /D_CRT_SECURE_NO_DEPRECATE /D_DEBUG
+  @set MYCOMPILE=cl /nologo /MDd /Od /Zi /W3 /c /D_CRT_SECURE_NO_DEPRECATE /D_DEBUG /DLUA_USER_H=\"luauser.h\"
   @set MYLINK=link /nologo /DEBUG /PDB:
 ) else (
   @echo Building in RELEASE mode...
-  @set MYCOMPILE=cl /nologo /MD /O2 /W3 /c /D_CRT_SECURE_NO_DEPRECATE
+  @set MYCOMPILE=cl /nologo /MD /O2 /W3 /c /D_CRT_SECURE_NO_DEPRECATE /DLUA_USER_H=\"luauser.h\"
   @set MYLINK=link /nologo
 )
 @set MYMT=mt /nologo
