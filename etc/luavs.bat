@@ -12,9 +12,9 @@
   @set MYCOMPILE=cl /nologo /MDd /Od /Zi /W3 /c /D_CRT_SECURE_NO_DEPRECATE /D_DEBUG /DLUA_USER_H=\"luauser.h\"
   @set MYLINK=link /nologo /DEBUG /PDB:
 ) else (
-  @echo Building in RELEASE mode...
-  @set MYCOMPILE=cl /nologo /MD /O2 /W3 /c /D_CRT_SECURE_NO_DEPRECATE /DLUA_USER_H=\"luauser.h\"
-  @set MYLINK=link /nologo
+  @echo Building in RELEASE mode with PDB files...
+  @set MYCOMPILE=cl /nologo /MD /O2 /Zi /W3 /c /D_CRT_SECURE_NO_DEPRECATE /DLUA_USER_H=\"luauser.h\"
+  @set MYLINK=link /nologo /DEBUG /PDB:
 )
 @set MYMT=mt /nologo
 
